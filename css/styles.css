@@ -1,3 +1,9 @@
+body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+header { background: #f4f4f4; padding: 10px 0; text-align: center; }
+header h1 { margin: 0; }
+main { padding: 20px; }
+footer { background: #333; color: #fff; text-align: center; padding: 10px 0; position: fixed; width: 100%; bottom: 0; }
+
 /*
  * Protect Children Australia Website Styles
  * A professional, warm, and child-friendly design for a child safety organization
