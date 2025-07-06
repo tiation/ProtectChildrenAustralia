@@ -1,6 +1,13 @@
 # Protect Children Australia Website
 
+🌐 **Live Site**: [https://tiation.github.io/ProtectChildrenAustralia/](https://tiation.github.io/ProtectChildrenAustralia/)
+
 A comprehensive resource website focused on child safety in Australia, providing information, resources, and support for parents, educators, and caregivers.
+
+## 🚀 Quick Links
+- **Live Website**: [https://tiation.github.io/ProtectChildrenAustralia/](https://tiation.github.io/ProtectChildrenAustralia/)
+- **Repository**: [https://github.com/tiation/ProtectChildrenAustralia](https://github.com/tiation/ProtectChildrenAustralia)
+- **GitHub Pages**: Automatically deployed from the `main` branch
 
 ## Project Overview
 
@@ -20,7 +27,11 @@ The website takes a safety-first approach, providing practical, evidence-based i
 ### Content Features
 - **Categorized Safety Information**: Content organized by safety categories (online, physical, mental health, etc.)
 - **Resource Library**: Curated links to external resources and helpful organizations
-- **Blog System**: Regular articles on child safety topics
+- **Comprehensive Blog System**: 100+ safety articles with full navigation
+  - Previous/Next navigation between articles
+  - Category-based filtering and browsing
+  - Featured articles section on homepage
+  - Search functionality across all posts
 - **Emergency Resources**: Quick access to critical safety information and contacts
 
 ### User Features
@@ -94,6 +105,32 @@ www.protectchildren.com.au/
 ├── newsletter-subscribe.php # Newsletter handler
 └── README.md               # This file
 ```
+
+## GitHub Pages Deployment
+
+This site is automatically deployed to GitHub Pages from the `main` branch at:
+**[https://tiation.github.io/ProtectChildrenAustralia/](https://tiation.github.io/ProtectChildrenAustralia/)**
+
+### New Navigation Features (v2024)
+
+🌟 **Complete Blog Navigation System**:
+- **100+ Safety Articles**: Comprehensive collection of child safety topics
+- **Sequential Navigation**: Previous/Next links on every article
+- **Category Browsing**: Filter by Physical Safety, Online Safety, Mental Health, Emergency Response
+- **Featured Articles**: Highlighted content on homepage
+- **Search Functionality**: Find articles by keyword or category
+- **Mobile-Responsive**: Optimized for all devices
+- **Emergency Access**: Quick links to 000, Kids Helpline, Lifeline on every page
+
+📝 **Blog Structure**:
+- Each post has consistent navigation header
+- Previous/Next navigation between all 100 posts
+- "Browse All Articles" button for easy discovery
+- Category dropdown in main navigation
+- Featured article cards on homepage
+
+### Automatic Deployment
+Changes pushed to the `main` branch are automatically deployed to GitHub Pages. No additional configuration required.
 
 ## Setup Instructions
 
