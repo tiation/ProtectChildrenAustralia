@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Protect Children Australia | Child Safety Articles & Resources</title>
+    <meta name="description" content="Browse our comprehensive collection of child safety articles covering physical safety, online safety, mental health, and emergency response for Australian families.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner text-center">
+        <strong>Emergency:</strong> For immediate danger call 000 | Kids Helpline: 1800 55 1800 | Lifeline: 13 11 14
+    </div>
+
+    <!-- Main Header -->
+    <header class="site-header py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <img src="images/logo.png" alt="Protect Children Australia Logo" class="site-logo me-3" style="max-height: 60px;">
+                        <div>
+                            <h1 class="site-name mb-0"><a href="index.html" style="text-decoration: none; color: inherit;">Protect Children Australia</a></h1>
+                            <p class="mb-0 text-muted">Your trusted source for child safety</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="main-nav text-end">
+                        <a href="index.html#safety-categories" class="me-3">Safety Topics</a>
+                        <a href="blog.html" class="me-3" style="color: var(--primary-dark); font-weight: bold;">Articles</a>
+                        <a href="index.html#resources" class="me-3">Resources</a>
+                        <a href="index.html#contact">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Blog Header Section -->
+        <section class="hero-section py-5 bg-primary-light">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h1 class="hero-title">Child Safety Blog</h1>
+                        <p class="hero-subtitle">Comprehensive articles and insights on protecting children from various risks and dangers across Australia. Browse by category or explore our complete collection.</p>
+                        
+                        <!-- Category Filter Buttons -->
+                        <div class="category-filters mt-4">
+                            <button class="btn btn-outline-primary me-2 mb-2 category-filter active" data-category="all">
+                                <i class="fas fa-th-large"></i> All Articles <span class="badge bg-primary ms-1" id="count-all">100</span>
+                            </button>
+                            <button class="btn btn-outline-primary me-2 mb-2 category-filter" data-category="Physical Safety">
+                                <i class="fas fa-shield-alt"></i> Physical Safety <span class="badge bg-secondary ms-1" id="count-physical">-</span>
+                            </button>
+                            <button class="btn btn-outline-primary me-2 mb-2 category-filter" data-category="Online Safety">
+                                <i class="fas fa-laptop"></i> Online Safety <span class="badge bg-secondary ms-1" id="count-online">-</span>
+                            </button>
+                            <button class="btn btn-outline-primary me-2 mb-2 category-filter" data-category="Mental Health">
+                                <i class="fas fa-heart"></i> Mental Health <span class="badge bg-secondary ms-1" id="count-mental">-</span>
+                            </button>
+                            <button class="btn btn-outline-primary me-2 mb-2 category-filter" data-category="Emergency Response">
+                                <i class="fas fa-phone"></i> Emergency Response <span class="badge bg-secondary ms-1" id="count-emergency">-</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Search Box -->
+                        <div class="search-container mt-4">
+                            <div class="input-group" style="max-width: 400px; margin: 0 auto;">
+                                <input type="text" class="form-control" id="searchInput" placeholder="Search articles...">
+                                <button class="btn btn-primary" type="button" id="searchButton">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats Section -->
+        <section class="py-4 bg-white border-bottom">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <i class="fas fa-newspaper text-primary fs-3"></i>
+                            <h3 class="mb-0 mt-2" id="total-articles">100</h3>
+                            <p class="text-muted mb-0">Total Articles</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <i class="fas fa-shield-alt text-accent fs-3"></i>
+                            <h3 class="mb-0 mt-2">4</h3>
+                            <p class="text-muted mb-0">Safety Categories</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <i class="fas fa-clock text-warning fs-3"></i>
+                            <h3 class="mb-0 mt-2">Updated</h3>
+                            <p class="text-muted mb-0">Daily</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <i class="fas fa-globe-asia text-info fs-3"></i>
+                            <h3 class="mb-0 mt-2">AU</h3>
+                            <p class="text-muted mb-0">Focus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="py-5" id="articles-section">
+            <div class="container">
+                <!-- Loading Indicator -->
+                <div id="loading" class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-3">Loading articles...</p>
+                </div>
+                
+                <!-- Articles Container -->
+                <div id="articles-container" class="row g-4" style="display: none;">
+                    <!-- Articles will be dynamically loaded here -->
+                </div>
+                
+                <!-- No Results Message -->
+                <div id="no-results" class="text-center py-5" style="display: none;">
+                    <i class="fas fa-search text-muted" style="font-size: 3rem;"></i>
+                    <h3 class="mt-3">No articles found</h3>
+                    <p class="text-muted">Try adjusting your search terms or category filter.</p>
+                    <button class="btn btn-primary" onclick="resetFilters()">Show All Articles</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Categories CTA -->
+        <section class="cta-section py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="cta-title">Explore by Category</h2>
+                        <p class="cta-text">Looking for specific safety information? Browse our dedicated category pages for curated content.</p>
+                        <div class="row g-3 justify-content-center mt-4">
+                            <div class="col-md-6 col-lg-3">
+                                <a href="blog/physical-safety.html" class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-shield-alt"></i><br>
+                                    Physical Safety
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <a href="blog/online-safety.html" class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-laptop"></i><br>
+                                    Online Safety
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <a href="blog/mental-health.html" class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-heart"></i><br>
+                                    Mental Health
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <a href="blog/emergency-response.html" class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-phone"></i><br>
+                                    Emergency Response
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency CTA -->
+        <section id="emergency-info" class="cta-section cta-danger py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="cta-title">Need Immediate Help?</h2>
+                        <p class="cta-text">If you or a child is in immediate danger, call emergency services at 000 right away.</p>
+                        <div class="cta-buttons">
+                            <div class="row g-3 justify-content-center">
+                                <div class="col-auto">
+                                    <a href="tel:000" class="btn btn-danger btn-lg">🚨 Call 000</a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="tel:1800551800" class="btn btn-primary btn-lg">📞 Kids Helpline</a>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="tel:131114" class="btn btn-secondary btn-lg">💙 Lifeline</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Protect Children Australia</h4>
+                    <p class="mb-2">Comprehensive child safety resources for Australian families.</p>
+                    <p class="mb-0">&copy; 2025 Protect Children Australia. All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Important Contacts</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Emergency:</strong> 000</li>
+                        <li><strong>Kids Helpline:</strong> 1800 55 1800</li>
+                        <li><strong>Lifeline:</strong> 13 11 14</li>
+                        <li><strong>Parentline:</strong> 1300 30 1300</li>
+                        <li><strong>Poison Information:</strong> 13 11 26</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0"><small>Disclaimer: This website provides information and resources. It is not a substitute for professional advice. In emergencies, always contact appropriate emergency services.</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Blog Posts Data (will be replaced with actual API call) -->
+    <script id="blog-data" type="application/json">
+        <!-- This will be populated by our Python script -->
+    </script>
+
+    <!-- Blog Index JavaScript -->
+    <script>
+        let allPosts = [];
+        let filteredPosts = [];
+        let currentCategory = 'all';
+        let currentSearchTerm = '';
+
+        // Load blog posts data
+        async function loadBlogPosts() {
+            try {
+                // In a real implementation, this would fetch from an API
+                // For now, we'll load from the embedded script tag
+                const response = await fetch('blog_metadata.json');
+                allPosts = await response.json();
+                filteredPosts = [...allPosts];
+                
+                updateCategoryCounts();
+                displayPosts();
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('articles-container').style.display = 'flex';
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+                // Fallback: hide loading and show empty state
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('no-results').style.display = 'block';
+            }
+        }
+
+        // Update category counts
+        function updateCategoryCounts() {
+            const counts = {
+                'Physical Safety': 0,
+                'Online Safety': 0,
+                'Mental Health': 0,
+                'Emergency Response': 0
+            };
+
+            allPosts.forEach(post => {
+                if (counts[post.category] !== undefined) {
+                    counts[post.category]++;
+                }
+            });
+
+            document.getElementById('count-all').textContent = allPosts.length;
+            document.getElementById('count-physical').textContent = counts['Physical Safety'];
+            document.getElementById('count-online').textContent = counts['Online Safety'];
+            document.getElementById('count-mental').textContent = counts['Mental Health'];
+            document.getElementById('count-emergency').textContent = counts['Emergency Response'];
+            document.getElementById('total-articles').textContent = allPosts.length;
+        }
+
+        // Filter posts by category
+        function filterByCategory(category) {
+            currentCategory = category;
+            
+            // Update active button
+            document.querySelectorAll('.category-filter').forEach(btn => {
+                btn.classList.remove('active');
+                const badge = btn.querySelector('.badge');
+                badge.classList.remove('bg-primary');
+                badge.classList.add('bg-secondary');
+            });
+            
+            const activeBtn = document.querySelector(`[data-category="${category}"]`);
+            activeBtn.classList.add('active');
+            const activeBadge = activeBtn.querySelector('.badge');
+            activeBadge.classList.remove('bg-secondary');
+            activeBadge.classList.add('bg-primary');
+            
+            applyFilters();
+        }
+
+        // Search posts
+        function searchPosts(searchTerm) {
+            currentSearchTerm = searchTerm.toLowerCase();
+            applyFilters();
+        }
+
+        // Apply both category and search filters
+        function applyFilters() {
+            filteredPosts = allPosts.filter(post => {
+                const matchesCategory = currentCategory === 'all' || post.category === currentCategory;
+                const matchesSearch = currentSearchTerm === '' || 
+                    post.title.toLowerCase().includes(currentSearchTerm) ||
+                    post.excerpt.toLowerCase().includes(currentSearchTerm) ||
+                    post.category.toLowerCase().includes(currentSearchTerm);
+                
+                return matchesCategory && matchesSearch;
+            });
+            
+            displayPosts();
+        }
+
+        // Display posts
+        function displayPosts() {
+            const container = document.getElementById('articles-container');
+            const noResults = document.getElementById('no-results');
+            
+            if (filteredPosts.length === 0) {
+                container.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+            
+            container.style.display = 'flex';
+            noResults.style.display = 'none';
+            
+            container.innerHTML = filteredPosts.map(post => `
+                <div class="col-md-6 col-lg-4">
+                    <div class="post-card h-100">
+                        <div class="post-card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-${getCategoryColor(post.category)} mb-2">${post.category}</span>
+                                <small class="text-muted">${post.date}</small>
+                            </div>
+                            <h3 class="post-card-title h5">${post.title}</h3>
+                            <p class="post-card-excerpt">${post.excerpt}</p>
+                            <a href="${post.url}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Get category color
+        function getCategoryColor(category) {
+            const colors = {
+                'Physical Safety': 'primary',
+                'Online Safety': 'info',
+                'Mental Health': 'success',
+                'Emergency Response': 'danger'
+            };
+            return colors[category] || 'secondary';
+        }
+
+        // Reset all filters
+        function resetFilters() {
+            currentCategory = 'all';
+            currentSearchTerm = '';
+            document.getElementById('searchInput').value = '';
+            filterByCategory('all');
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            loadBlogPosts();
+            
+            // Check for URL parameters and set initial category
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            if (categoryParam) {
+                filterByCategory(categoryParam);
+            }
+            
+            // Category filter buttons
+            document.querySelectorAll('.category-filter').forEach(button => {
+                button.addEventListener('click', function() {
+                    filterByCategory(this.dataset.category);
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            
+            searchButton.addEventListener('click', function() {
+                searchPosts(searchInput.value);
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchPosts(this.value);
+                }
+            });
+            
+            // Real-time search (optional)
+            searchInput.addEventListener('input', function() {
+                searchPosts(this.value);
+            });
+        });
+    </script>
+
+    <!-- Additional Styles -->
+    <style>
+        .category-filter {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+        
+        .category-filter.active {
+            background-color: var(--primary) !important;
+            border-color: var(--primary) !important;
+            color: white !important;
+        }
+        
+        .stat-item {
+            padding: 1rem;
+        }
+        
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+        
+        .post-card {
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-light);
+        }
+        
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .input-group .form-control {
+            border-radius: 0.375rem 0 0 0.375rem;
+        }
+        
+        .input-group .btn {
+            border-radius: 0 0.375rem 0.375rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .category-filters {
+                text-align: center;
+            }
+            
+            .category-filter {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+                margin: 0.2rem;
+            }
+        }
+    </style>
+</body>
+</html>
+
