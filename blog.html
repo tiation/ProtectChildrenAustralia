@@ -473,6 +473,36 @@
                 margin: 0.2rem;
             }
         }
+        
+        /* Footer Height Fix */
+        .site-footer {
+            max-height: 250px !important;
+            overflow-y: auto !important;
+            padding: 1.5rem 0 !important;
+        }
+        .site-footer h4, .site-footer h5 {
+            font-size: 1rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .site-footer p {
+            font-size: 0.85rem !important;
+            margin-bottom: 0.25rem !important;
+        }
+        .site-footer ul {
+            font-size: 0.85rem !important;
+        }
+        .site-footer li {
+            margin-bottom: 0.25rem !important;
+        }
+        /* Ensure body is properly structured for footer at bottom */
+        body {
+            display: flex !important;
+            flex-direction: column !important;
+            min-height: 100vh !important;
+        }
+        main {
+            flex: 1 !important;
+        }
     </style>
 </body>
 </html>
