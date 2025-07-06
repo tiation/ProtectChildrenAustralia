@@ -430,25 +430,61 @@
     
     <!-- Footer Height Fix -->
     <style>
+        /* Fixed height footer with scrollable content */
         .site-footer {
-            max-height: 250px !important;
-            overflow-y: auto !important;
-            padding: 1.5rem 0 !important;
+            height: 200px !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            position: relative !important;
         }
+        
+        .site-footer .container {
+            height: 100% !important;
+            overflow-y: auto !important;
+            padding: 1.5rem 15px !important;
+            scrollbar-width: thin !important;
+            scrollbar-color: #6c757d #212529 !important;
+        }
+        
+        /* Webkit scrollbar styling */
+        .site-footer .container::-webkit-scrollbar {
+            width: 6px !important;
+        }
+        
+        .site-footer .container::-webkit-scrollbar-track {
+            background: #212529 !important;
+        }
+        
+        .site-footer .container::-webkit-scrollbar-thumb {
+            background: #6c757d !important;
+            border-radius: 3px !important;
+        }
+        
+        .site-footer .container::-webkit-scrollbar-thumb:hover {
+            background: #adb5bd !important;
+        }
+        
         .site-footer h4, .site-footer h5 {
             font-size: 1rem !important;
             margin-bottom: 0.5rem !important;
         }
         .site-footer p {
-            font-size: 0.85rem !important;
-            margin-bottom: 0.25rem !important;
+            font-size: 0.8rem !important;
+            margin-bottom: 0.3rem !important;
+            line-height: 1.3 !important;
         }
         .site-footer ul {
-            font-size: 0.85rem !important;
+            font-size: 0.8rem !important;
+            margin-bottom: 0.5rem !important;
         }
         .site-footer li {
-            margin-bottom: 0.25rem !important;
+            margin-bottom: 0.2rem !important;
+            line-height: 1.3 !important;
         }
+        .site-footer hr {
+            margin: 0.8rem 0 !important;
+        }
+        
         /* Ensure body is properly structured for footer at bottom */
         body {
             display: flex !important;
@@ -457,6 +493,19 @@
         }
         main {
             flex: 1 !important;
+        }
+        
+        /* Add scroll indicator */
+        .site-footer::after {
+            content: "" !important;
+            position: absolute !important;
+            bottom: 5px !important;
+            right: 15px !important;
+            width: 20px !important;
+            height: 3px !important;
+            background: linear-gradient(90deg, transparent, #6c757d, transparent) !important;
+            border-radius: 2px !important;
+            opacity: 0.7 !important;
         }
     </style>
     
