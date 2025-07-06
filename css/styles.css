@@ -673,25 +673,29 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus, [tabindex]:foc
 }
 
 /* --------------------------------------
- * Footer Styles
+/* Footer Styles
  * -------------------------------------- */
 .site-footer {
-    margin-top: var(--spacing-xxl);
+    margin-top: auto;
+    padding: var(--spacing-lg) 0;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .footer-top {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-md) 0;
 }
 
-.footer-top h4 {
+.footer-top h4, .footer-top h5 {
     color: var(--white);
-    margin-bottom: var(--spacing-md);
-    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
 }
 
 .footer-top p {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-xs);
 }
 
 .footer-links {
