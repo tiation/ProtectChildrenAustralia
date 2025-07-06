@@ -5,9 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Protect Children Australia | Child Safety Articles & Resources</title>
     <meta name="description" content="Browse our comprehensive collection of child safety articles covering physical safety, online safety, mental health, and emergency response for Australian families.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- Critical CSS for GitHub Pages fallback -->
+    <style>
+        /* Critical responsive card styles - inline fallback */
+        :root {
+            --primary: #2e86de;
+            --primary-dark: #1c6bc7;
+            --primary-light: #d6e9ff;
+            --secondary: #ff7979;
+            --secondary-light: #ffe0e0;
+            --accent: #26c281;
+            --accent-light: #e6f7f0;
+            --dark: #2d3436;
+            --gray-dark: #636e72;
+            --gray-light: #dfe6e9;
+            --white: #ffffff;
+            --danger: #e74c3c;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            --shadow-md: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+            --border-radius-md: 0.5rem;
+            --transition-medium: 0.3s ease-in-out;
+        }
+        
+        .emergency-banner {
+            background-color: var(--danger);
+            color: var(--white);
+            padding: 0.5rem 0;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .hero-section {
+            background-color: var(--primary-light);
+        }
+        
+        .hero-title {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+        
+        /* Enhanced responsive post cards */
+        .post-card {
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+            border: 1px solid var(--gray-light) !important;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg) !important;
+            border-color: var(--primary-light) !important;
+        }
+        
+        .site-footer {
+            background-color: var(--dark);
+            color: var(--white);
+        }
+        
+        /* Ensure proper button styling */
+        .btn-outline-primary {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+        
+        /* Category filter buttons */
+        .category-filter {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+        
+        .category-filter.active {
+            background-color: var(--primary) !important;
+            border-color: var(--primary) !important;
+            color: white !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Emergency Banner -->
@@ -29,11 +114,65 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <nav class="main-nav text-end">
-                        <a href="index.html#safety-categories" class="me-3">Safety Topics</a>
-                        <a href="blog.html" class="me-3" style="color: var(--primary-dark); font-weight: bold;">Articles</a>
-                        <a href="index.html#resources" class="me-3">Resources</a>
-                        <a href="index.html#contact">Contact</a>
+                    <!-- Bootstrap Navbar for Mobile Hamburger Menu -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <!-- Mobile Hamburger Toggle Button -->
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <!-- Collapsible Navigation Menu -->
+                        <div class="collapse navbar-collapse" id="mainNavigation">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#safety-categories">Safety Topics</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="blog.html" style="color: var(--primary-dark); font-weight: bold;">
+                                        <i class="fas fa-newspaper"></i> Blog (100+ Articles)
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Browse By Category
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a class="dropdown-item" href="blog.html?category=Physical+Safety">
+                                                <i class="fas fa-shield-alt text-primary"></i> Physical Safety
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="blog.html?category=Online+Safety">
+                                                <i class="fas fa-laptop text-info"></i> Online Safety
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="blog.html?category=Mental+Health">
+                                                <i class="fas fa-heart text-success"></i> Mental Health
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="blog.html?category=Emergency+Response">
+                                                <i class="fas fa-phone text-danger"></i> Emergency Response
+                                            </a>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <a class="dropdown-item" href="blog.html">
+                                                <i class="fas fa-th-large"></i> View All Articles
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#resources">Resources</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -130,7 +269,7 @@
                 </div>
                 
                 <!-- Articles Container -->
-                <div id="articles-container" class="row g-4" style="display: none;">
+                <div id="articles-container" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 g-md-4" style="display: none;">
                     <!-- Articles will be dynamically loaded here -->
                 </div>
                 
@@ -348,16 +487,16 @@
             noResults.style.display = 'none';
             
             container.innerHTML = filteredPosts.map(post => `
-                <div class="col-md-6 col-lg-4">
-                    <div class="post-card h-100">
-                        <div class="post-card-body p-4">
+                <div class="col">
+                    <div class="post-card h-100 card border-0 shadow-sm">
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <span class="badge bg-${getCategoryColor(post.category)} mb-2">${post.category}</span>
                                 <small class="text-muted">${post.date}</small>
                             </div>
-                            <h3 class="post-card-title h5">${post.title}</h3>
-                            <p class="post-card-excerpt">${post.excerpt}</p>
-                            <a href="${post.url}" class="btn btn-primary">Read More</a>
+                            <h3 class="post-card-title h5 mb-3">${post.title}</h3>
+                            <p class="post-card-excerpt flex-grow-1 mb-3">${post.excerpt}</p>
+                            <a href="${post.url}" class="btn btn-outline-primary mt-auto">Read More</a>
                         </div>
                     </div>
                 </div>

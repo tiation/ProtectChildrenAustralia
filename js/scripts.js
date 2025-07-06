@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTabs();
     initFormValidation();
     initAccessibilityEnhancements();
+    initMobileNavigation();
 });
 
 /**
@@ -477,5 +478,156 @@ function initLazyLoading() {
             img.classList.add('loaded');
         });
     }
+}
+
+/**
+ * Mobile Navigation Enhancement
+ * Improves mobile hamburger menu functionality and touch experience
+ */
+function initMobileNavigation() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const dropdownToggles = document.querySelectorAll('.navbar-nav .dropdown-toggle');
+    
+    if (!navbarToggler || !navbarCollapse) return;
+    
+    // Enhanced touch support for hamburger button
+    let touchStartY = 0;
+    let touchEndY = 0;
+    
+    navbarToggler.addEventListener('touchstart', function(e) {
+        touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    
+    navbarToggler.addEventListener('touchend', function(e) {
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipeGesture();
+    }, { passive: true });
+    
+    function handleSwipeGesture() {
+        const swipeThreshold = 50;
+        const swipeDistance = touchEndY - touchStartY;
+        
+        // If user swipes down and menu is closed, open it
+        if (swipeDistance > swipeThreshold && !navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+        }
+        // If user swipes up and menu is open, close it
+        else if (swipeDistance < -swipeThreshold && navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+        }
+    }
+    
+    // Auto-close mobile menu when clicking on nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Only close on mobile screens
+            if (window.innerWidth < 768 && navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        });
+    });
+    
+    // Enhanced dropdown handling for mobile
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            // On mobile, prevent default Bootstrap behavior and handle manually
+            if (window.innerWidth < 768) {
+                e.preventDefault();
+                const dropdownMenu = this.nextElementSibling;
+                const isOpen = dropdownMenu.classList.contains('show');
+                
+                // Close all other dropdowns first
+                document.querySelectorAll('.navbar-nav .dropdown-menu.show').forEach(menu => {
+                    if (menu !== dropdownMenu) {
+                        menu.classList.remove('show');
+                        menu.previousElementSibling.setAttribute('aria-expanded', 'false');
+                    }
+                });
+                
+                // Toggle current dropdown
+                if (isOpen) {
+                    dropdownMenu.classList.remove('show');
+                    this.setAttribute('aria-expanded', 'false');
+                } else {
+                    dropdownMenu.classList.add('show');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            }
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth < 768) {
+            const isClickInsideNav = navbarCollapse.contains(e.target) || navbarToggler.contains(e.target);
+            
+            if (!isClickInsideNav && navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        }
+    });
+    
+    // Handle window resize to reset mobile menu state
+    window.addEventListener('resize', debounce(function() {
+        if (window.innerWidth >= 768) {
+            // Reset mobile menu state on desktop
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+            
+            // Reset dropdown states
+            document.querySelectorAll('.navbar-nav .dropdown-menu.show').forEach(menu => {
+                menu.classList.remove('show');
+                menu.previousElementSibling.setAttribute('aria-expanded', 'false');
+            });
+        }
+    }, 250));
+    
+    // Keyboard navigation enhancements for mobile menu
+    navbarToggler.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+        }
+    });
+    
+    // Focus management for accessibility
+    navbarToggler.addEventListener('click', function() {
+        // Focus first nav link when menu opens
+        setTimeout(() => {
+            if (navbarCollapse.classList.contains('show')) {
+                const firstNavLink = navbarCollapse.querySelector('.nav-link');
+                if (firstNavLink) {
+                    firstNavLink.focus();
+                }
+            }
+        }, 300); // Wait for Bootstrap animation
+    });
+    
+    // Escape key to close mobile menu
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+            navbarToggler.focus();
+        }
+    });
+    
+    // Add visual feedback for touch interactions
+    function addTouchFeedback(element) {
+        element.addEventListener('touchstart', function() {
+            this.classList.add('touch-active');
+        }, { passive: true });
+        
+        element.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.classList.remove('touch-active');
+            }, 150);
+        }, { passive: true });
+    }
+    
+    // Apply touch feedback to interactive elements
+    [navbarToggler, ...navLinks, ...dropdownToggles].forEach(addTouchFeedback);
 }
 

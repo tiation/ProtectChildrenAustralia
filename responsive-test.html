@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards Test - Protect Children Australia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
+    
+    <style>
+        :root {
+            --primary: #2e86de;
+            --primary-light: #d6e9ff;
+            --gray-light: #dfe6e9;
+            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+            --transition-medium: 0.3s ease-in-out;
+        }
+        
+        .test-card {
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+            border: 1px solid var(--gray-light) !important;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg) !important;
+            border-color: var(--primary-light) !important;
+        }
+        
+        .test-card-image {
+            height: 200px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .viewport-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            z-index: 1000;
+        }
+        
+        .test-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+        }
+        
+        .breakpoint-indicator {
+            display: none;
+            background: #28a745;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 575.98px) {
+            .breakpoint-indicator.xs { display: block; background: #dc3545; }
+        }
+        
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .breakpoint-indicator.sm { display: block; background: #fd7e14; }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .breakpoint-indicator.md { display: block; background: #ffc107; color: black; }
+        }
+        
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .breakpoint-indicator.lg { display: block; background: #20c997; }
+        }
+        
+        @media (min-width: 1200px) {
+            .breakpoint-indicator.xl { display: block; background: #6f42c1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="viewport-info" id="viewport-info">
+        Viewport: <span id="viewport-size"></span>
+    </div>
+    
+    <div class="breakpoint-indicator xs">📱 XS - Mobile Portrait (< 576px)</div>
+    <div class="breakpoint-indicator sm">📱 SM - Mobile Landscape (576px - 767px)</div>
+    <div class="breakpoint-indicator md">📱 MD - Tablet (768px - 991px)</div>
+    <div class="breakpoint-indicator lg">💻 LG - Desktop (992px - 1199px)</div>
+    <div class="breakpoint-indicator xl">🖥️ XL - Large Desktop (≥ 1200px)</div>
+    
+    <div class="container py-5">
+        <h1 class="text-center mb-4">🧪 Responsive Cards Test</h1>
+        <p class="text-center mb-5">Testing Bootstrap responsive grid with enhanced category & blog cards</p>
+        
+        <!-- Test 1: Category Cards Layout -->
+        <div class="test-section">
+            <h2>📋 Category Cards (4 cols on LG+, 2 on SM+, 1 on XS)</h2>
+            <p><code>row-cols-1 row-cols-sm-2 row-cols-lg-4</code></p>
+            
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 g-md-4">
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <h3 class="h5 mb-3">Physical Safety</h3>
+                            <p class="flex-grow-1 mb-3">Water safety, playground safety, and emergency preparedness.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <h3 class="h5 mb-3">Online Safety</h3>
+                            <p class="flex-grow-1 mb-3">Protecting children from cyberbullying and online predators.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <h3 class="h5 mb-3">Mental Health</h3>
+                            <p class="flex-grow-1 mb-3">Supporting children's emotional wellbeing and resilience.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <h3 class="h5 mb-3">Emergency Response</h3>
+                            <p class="flex-grow-1 mb-3">First aid and emergency contact information.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Test 2: Blog Cards Layout -->
+        <div class="test-section">
+            <h2>📝 Blog Cards (4 cols on XL, 3 on LG, 2 on SM+, 1 on XS)</h2>
+            <p><code>row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4</code></p>
+            
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 g-md-4">
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-primary mb-2">Safety</span>
+                                <small class="text-muted">Jan 15</small>
+                            </div>
+                            <h3 class="h5 mb-3">Water Safety Guide</h3>
+                            <p class="flex-grow-1 mb-3">Essential tips for keeping children safe around water.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-info mb-2">Home</span>
+                                <small class="text-muted">Jan 20</small>
+                            </div>
+                            <h3 class="h5 mb-3">Kitchen Safety</h3>
+                            <p class="flex-grow-1 mb-3">Setting up safe zones in your kitchen for curious toddlers.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-success mb-2">Digital</span>
+                                <small class="text-muted">Jan 25</small>
+                            </div>
+                            <h3 class="h5 mb-3">Screen Time</h3>
+                            <p class="flex-grow-1 mb-3">Managing healthy screen time for children of all ages.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-warning mb-2">Transport</span>
+                                <small class="text-muted">Jan 30</small>
+                            </div>
+                            <h3 class="h5 mb-3">Car Safety</h3>
+                            <p class="flex-grow-1 mb-3">Proper car seat installation and road safety tips.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-first-aid"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-danger mb-2">Emergency</span>
+                                <small class="text-muted">Feb 1</small>
+                            </div>
+                            <h3 class="h5 mb-3">First Aid Basics</h3>
+                            <p class="flex-grow-1 mb-3">Essential first aid skills every parent should know.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="test-card h-100 card border-0 shadow-sm">
+                        <div class="test-card-image">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3 p-md-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <span class="badge bg-secondary mb-2">Social</span>
+                                <small class="text-muted">Feb 5</small>
+                            </div>
+                            <h3 class="h5 mb-3">Social Media</h3>
+                            <p class="flex-grow-1 mb-3">Teaching children about social media safety and privacy.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Responsive Testing Info -->
+        <div class="test-section bg-light">
+            <h2>📐 Current Test Results</h2>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <h5>✅ What Should Work:</h5>
+                    <ul>
+                        <li><strong>Mobile (XS):</strong> 1 card per row</li>
+                        <li><strong>Mobile Landscape (SM):</strong> 2 cards per row</li>
+                        <li><strong>Tablet (MD):</strong> 2-3 cards per row</li>
+                        <li><strong>Desktop (LG):</strong> 3-4 cards per row</li>
+                        <li><strong>Large Desktop (XL):</strong> 4+ cards per row</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>🧪 CSS Features Tested:</h5>
+                    <ul>
+                        <li>Bootstrap <code>row-cols-*</code> classes</li>
+                        <li>Responsive gap spacing with <code>g-3 g-md-4</code></li>
+                        <li>Card hover effects and animations</li>
+                        <li>Flexbox column layout for equal heights</li>
+                        <li>Mobile-first responsive design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-primary btn-lg me-3">← Back to Home</a>
+            <a href="blog.html" class="btn btn-outline-primary btn-lg">View Blog →</a>
+        </div>
+    </div>
+    
+    <script>
+        function updateViewportInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('viewport-size').textContent = `${width}x${height}`;
+        }
+        
+        updateViewportInfo();
+        window.addEventListener('resize', updateViewportInfo);
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

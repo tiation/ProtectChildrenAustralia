@@ -4,17 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physical Safety for Children - Protect Children Australia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
-        <h1><a href="../index.html">Protect Children Australia</a></h1>
-        <nav>
-            <a href="../index.html">Home</a> | 
-            <a href="online-safety.html">Online Safety</a> | 
-            <a href="mental-health.html">Mental Health</a> |
-            <a href="emergency-response.html">Emergency Response</a>
-        </nav>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner text-center">
+        <strong>Emergency:</strong> For immediate danger call 000 | Kids Helpline: 1800 55 1800 | Lifeline: 13 11 14
+    </div>
+
+    <!-- Main Header -->
+    <header class="site-header py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <img src="../images/logo.png" alt="Protect Children Australia Logo" class="site-logo me-3" style="max-height: 60px;">
+                        <div>
+                            <h1 class="site-name mb-0"><a href="../index.html" style="text-decoration: none; color: inherit;">Protect Children Australia</a></h1>
+                            <p class="mb-0 text-muted">Your trusted source for child safety</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Bootstrap Navbar for Mobile Hamburger Menu -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <!-- Mobile Hamburger Toggle Button -->
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <!-- Collapsible Navigation Menu -->
+                        <div class="collapse navbar-collapse" id="mainNavigation">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../blog.html">
+                                        <i class="fas fa-newspaper"></i> Blog
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Browse By Category
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li>
+                                            <a class="dropdown-item active" href="physical-safety.html">
+                                                <i class="fas fa-shield-alt text-primary"></i> Physical Safety
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="online-safety.html">
+                                                <i class="fas fa-laptop text-info"></i> Online Safety
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="mental-health.html">
+                                                <i class="fas fa-heart text-success"></i> Mental Health
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="emergency-response.html">
+                                                <i class="fas fa-phone text-danger"></i> Emergency Response
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html#resources">Resources</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="container-narrow">
@@ -270,6 +340,11 @@
     <footer>
         <p>&copy; 2025 Protect Children Australia | <a href="../index.html">Home</a> | <a href="mailto:info@protectchildren.com.au">Contact</a></p>
     </footer>
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/scripts.js"></script>
 </body>
 </html>
 
