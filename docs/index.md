@@ -1,34 +1,44 @@
-# ProtectChildrenAustralia Wiki
+# Protect Children Australia Documentation
 
-Welcome to the wiki for the ProtectChildrenAustralia repository. Here you'll find documentation related to setup, development, and contribution.
+Welcome to the official documentation for Protect Children Australia. This comprehensive resource center provides all the information you need to understand, deploy, and use the platform effectively.
 
-## Sections
+![Protect Children Australia Logo](../images/logo.png)
 
-- [User Guide](user-guide.md)
-- [API Reference](api-reference.md)
-- [Architecture Guide](architecture.md)
-- [Deployment Guide](deployment.md)
+## 🚀 Getting Started
 
+- [User Guide](user-guide.md) - Learn how to navigate and use the website
+- [Installation Guide](../README.md#setup-instructions) - Set up the platform locally
+- [FAQ](faq.md) - Frequently asked questions and answers
 
-## 📚 Additional Resources
+## 🛠️ Developer Resources
 
-- [FAQ](faq.md) - Frequently asked questions
+- [Architecture Overview](architecture.md) - Technical architecture and design
+- [API Reference](api-reference.md) - Complete API documentation
+- [Deployment Guide](deployment.md) - Production deployment instructions
+
+## 🔧 Support
+
 - [Troubleshooting](troubleshooting.md) - Common issues and solutions
-- [Contributing](../CONTRIBUTING.md) - How to contribute to this project
-- [License](../LICENSE) - Project license information
+- Contact: info@protectchildren.com.au
 
-## 🎨 Theme Information
+## 📊 Project Statistics
 
-This project features a **dark neon theme** with:
-- Cyan gradient flares
-- Professional enterprise styling
-- Mobile-responsive design
-- Accessibility features
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap 5
+- **Backend**: PHP 7.4+, MySQL 5.7+
+- **Security**: Prepared statements, CSRF protection, Password hashing
+- **Features**: Blog system, Resource library, Admin panel, Newsletter
 
-## 🚀 Quick Links
+## 🌐 Live Demo
 
-- [GitHub Repository](https://github.com/TiaAstor/ProtectChildrenAustralia)
-- [Live Demo](https://tiaastor.github.io/ProtectChildrenAustralia)
-- [Documentation](https://github.com/TiaAstor/ProtectChildrenAustralia/wiki)
-- [Issues](https://github.com/TiaAstor/ProtectChildrenAustralia/issues)
+Experience the platform in action: [Visit Demo Site](https://yourusername.github.io/ProtectChildrenAustralia)
 
+## 🔗 Quick Links
+
+- [GitHub Repository](https://github.com/yourusername/ProtectChildrenAustralia)
+- [Issue Tracker](https://github.com/yourusername/ProtectChildrenAustralia/issues)
+- [Contributing Guidelines](../CONTRIBUTING.md)
+- [Code of Conduct](../CODE_OF_CONDUCT.md)
+
+---
+
+*This documentation is continuously updated to reflect the latest features and improvements.*

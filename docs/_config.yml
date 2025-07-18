@@ -1,0 +1,44 @@
+title: Protect Children Australia
+description: A comprehensive resource website focused on child safety in Australia
+theme: jekyll-theme-midnight
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# GitHub Pages configuration
+url: "https://yourusername.github.io"
+baseurl: "/ProtectChildrenAustralia"
+
+# Navigation
+nav:
+  - title: Home
+    url: /
+  - title: Documentation
+    url: /docs/
+  - title: User Guide
+    url: /docs/user-guide
+  - title: API Reference
+    url: /docs/api-reference
+  - title: Architecture
+    url: /docs/architecture
+  - title: Deployment
+    url: /docs/deployment
+  - title: FAQ
+    url: /docs/faq
+  - title: Troubleshooting
+    url: /docs/troubleshooting
+
+# Site settings
+author:
+  name: Protect Children Australia Team
+  email: info@protectchildren.com.au
+
+# Social media
+social:
+  github: yourusername/ProtectChildrenAustralia
+
+# Additional settings
+show_downloads: true
