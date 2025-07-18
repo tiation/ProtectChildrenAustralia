@@ -1,45 +1,51 @@
-# ProtectChildrenAustralia
+# Protect Children Australia Website
 
 <div align="center">
 
 ![ProtectChildrenAustralia Banner](https://img.shields.io/badge/🔮_TIATION_ECOSYSTEM-ProtectChildrenAustralia-00FFFF?style=for-the-badge&labelColor=0A0A0A&color=00FFFF)
 
-**Enterprise-grade solution: ProtectChildrenAustralia**
+**Enterprise-grade child safety resource website for Australian families and educators**
 
-*Professional • Scalable • Mission-Driven*
+*Professional • Secure • Mission-Driven*
 
 [![🌐_Live_Demo](https://img.shields.io/badge/🌐_Live_Demo-View_Project-00FFFF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/ProtectChildrenAustralia)
 [![📚_Documentation](https://img.shields.io/badge/📚_Documentation-Complete-007FFF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/ProtectChildrenAustralia)
-[![🏗️_Architecture](https://img.shields.io/badge/🏗️_Architecture-Diagram-FF00FF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/ProtectChildrenAustralia/architecture)
+[![🏗️_Architecture](https://img.shields.io/badge/🏗️_Architecture-Diagram-FF00FF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/ProtectChildrenAustralia/docs/architecture)
 [![⚡_Status](https://img.shields.io/badge/⚡_Status-Active Development-FF00FF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/ProtectChildrenAustralia)
-[![📄_License](https://img.shields.io/badge/📄_License-MIT-00FFFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/ProtectChildrenAustralia/blob/main/LICENSE)
+[![📄_License](https://img.shields.io/badge/📄_License-MIT-00FFFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/ProtectChildrenAustralia/blob/master/LICENSE)
 
 </div>
 
 ## 🚀 Overview
 
-Enterprise-grade solution: ProtectChildrenAustralia
+Protect Children Australia is a comprehensive, enterprise-grade resource website focused on child safety in Australia. Our platform provides accessible, evidence-based information tailored to Australian contexts and regulations for parents, educators, and caregivers.
 
 ### ✨ Key Features
 
-- 🎯 **Feature 1** - Description 1
-- 🔧 **Feature 2** - Description 2
-- 🌟 **Feature 3** - Description 3
-- 🛡️ **Feature 4** - Description 4
+- 📚 **Comprehensive Resource Library** - Curated safety information organized by categories
+- 📝 **Dynamic Blog System** - Regular updates on child safety topics
+- 🔐 **Secure Admin Panel** - Professional content management system
+- 📧 **Newsletter Integration** - Keep users informed with latest safety updates
+- 📱 **Mobile-Responsive Design** - Optimized for all devices
+- 🔍 **Advanced Search** - Find relevant content quickly
+- 🎨 **Professional Design** - Clean, accessible interface with dark neon theme
 
 ---
 
 ## 🏗️ Architecture
 
-![Architecture Diagram](assets/architecture/ProtectChildrenAustralia-architecture.svg)
+![Architecture Diagram](docs/images/architecture-diagram.png)
 
 ### System Components
 
 ```mermaid
 graph TB
-    A[Component 1] --> B[Component 2]
-    B --> C[Component 3]
-    C --> D[Component 4]
+    A[Web Browser] --> B[PHP Application]
+    B --> C[MySQL Database]
+    D[Admin Panel] --> B
+    E[Content Management] --> B
+    B --> F[Newsletter System]
+    B --> G[Contact Forms]
     
     style A fill:#00ffff,stroke:#ff00ff,stroke-width:2px
     style B fill:#ff00ff,stroke:#00ffff,stroke-width:2px
@@ -49,10 +55,10 @@ graph TB
 
 ### Technology Stack
 
-- **Frontend**: Modern Frontend
-- **Backend**: Scalable Backend
-- **Database**: Database
-- **Infrastructure**: Infrastructure
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap 5
+- **Backend**: PHP 7.4+, MySQL 5.7+
+- **Database**: MySQL with PDO for secure database operations
+- **Infrastructure**: GitHub Pages for documentation, traditional web hosting for application
 
 ---
 
@@ -85,11 +91,17 @@ graph TB
 git clone https://github.com/tiation/ProtectChildrenAustralia.git
 cd ProtectChildrenAustralia
 
-# Install dependencies
-{{INSTALL_COMMANDS}}
+# Install PHP dependencies
+composer install
 
-# Run the application
-{{RUN_COMMANDS}}
+# Set up database
+mysql -u root -p < db/database_init.sql
+
+# Configure settings
+cp includes/config.example.php includes/config.php
+
+# Start local development server
+php -S localhost:8000
 ```
 
 ---
@@ -98,7 +110,11 @@ cd ProtectChildrenAustralia
 
 ### Prerequisites
 
-{{PREREQUISITES}}
+- Web server (Apache/Nginx)
+- PHP 7.4 or higher
+- MySQL 5.7 or higher
+- Composer (for dependency management)
+- Git (optional)
 
 ### Installation Steps
 
@@ -110,12 +126,19 @@ cd ProtectChildrenAustralia
 
 2. **Install dependencies**
    ```bash
-   {{DETAILED_INSTALL_COMMANDS}}
+   composer install
    ```
 
 3. **Configuration**
    ```bash
-   {{CONFIG_COMMANDS}}
+   # Copy configuration template
+   cp includes/config.example.php includes/config.php
+   
+   # Edit configuration with your database credentials
+   nano includes/config.php
+   
+   # Set up database
+   mysql -u root -p < db/database_init.sql
    ```
 
 ---
@@ -124,15 +147,29 @@ cd ProtectChildrenAustralia
 
 ### Basic Usage
 
-{{BASIC_USAGE}}
+1. **Access the website** at your configured URL
+2. **Browse resources** using the category navigation
+3. **Search content** using the search functionality
+4. **Subscribe to newsletter** for updates
+5. **Contact us** through the contact form
 
-### Advanced Usage
+### Admin Panel
 
-{{ADVANCED_USAGE}}
+1. **Access admin** at `/admin/`
+2. **Login** with admin credentials
+3. **Manage content** through the dashboard
+4. **Add blog posts** and resources
+5. **Monitor subscribers** and messages
 
-### Examples
+### API Usage
 
-{{USAGE_EXAMPLES}}
+```php
+// Example API call to get posts
+$posts = getPostsByCategory('online-safety');
+
+// Example contact form submission
+submitContactForm($name, $email, $message);
+```
 
 ---
 
@@ -153,13 +190,18 @@ Visit our [GitHub Pages site](https://tiation.github.io/ProtectChildrenAustralia
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="assets/screenshots/main-interface.png" alt="Main Interface" width="800">
-  <p><em>Main application interface</em></p>
+  <img src="docs/images/screenshot-homepage.png" alt="Homepage" width="800">
+  <p><em>Homepage with dark neon theme</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/screenshots/dashboard.png" alt="Dashboard" width="800">
-  <p><em>Analytics dashboard</em></p>
+  <img src="docs/images/screenshot-admin.png" alt="Admin Dashboard" width="800">
+  <p><em>Admin dashboard interface</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/images/screenshot-resources.png" alt="Resource Library" width="800">
+  <p><em>Resource library page</em></p>
 </div>
 
 ---
@@ -180,13 +222,13 @@ A: We offer community support through GitHub Issues and professional enterprise 
 ### Technical Questions
 
 **Q: What are the system requirements?**
-A: {{SYSTEM_REQUIREMENTS}}
+A: Web server with PHP 7.4+, MySQL 5.7+, and at least 1GB RAM for optimal performance.
 
 **Q: How do I handle large scale deployments?**
 A: See our [Deployment Guide](docs/deployment.md) for enterprise-scale deployment strategies.
 
 **Q: Are there any security considerations?**
-A: Yes, please review our [Security Guide](docs/security.md) for comprehensive security best practices.
+A: Yes, please review our [Security Policy](SECURITY.md) for comprehensive security best practices.
 
 ### Troubleshooting
 
@@ -194,7 +236,7 @@ A: Yes, please review our [Security Guide](docs/security.md) for comprehensive s
 A: Check our [Troubleshooting Guide](docs/troubleshooting.md) for solutions to common problems.
 
 **Q: Performance optimization**
-A: Refer to our [Performance Guide](docs/performance.md) for optimization strategies.
+A: Refer to our [Troubleshooting Guide](docs/troubleshooting.md) for performance optimization strategies.
 
 ---
 
