@@ -71,19 +71,56 @@
     </main>
 
     <!-- Footer -->
-    <footer class="simple-footer">
+    <footer class="tiation-footer">
         <div class="container">
-            <div class="text-center">
-                <div class="footer-links mb-3">
-                    <a href="{{ '/docs/' | relative_url }}">Docs</a>
-                    <a href="{{ site.social.github }}" target="_blank">GitHub</a>
-                    <a href="{{ '/docs/api-reference' | relative_url }}">API</a>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="tiation-brand">{{ site.title }}</h5>
+                    <p class="text-muted">Child safety resources for Australian families and educators.</p>
+                    <div class="tiation-emergency">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Emergency: <strong>000</strong></span>
+                    </div>
                 </div>
-                <div class="footer-emergency mb-3">
-                    <span class="text-warning">Emergency: Call <strong>000</strong></span>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="tiation-heading">Documentation</h6>
+                    <ul class="tiation-links">
+                        <li><a href="{{ '/docs/' | relative_url }}">Overview</a></li>
+                        <li><a href="{{ '/docs/user-guide' | relative_url }}">User Guide</a></li>
+                        <li><a href="{{ '/docs/api-reference' | relative_url }}">API Reference</a></li>
+                        <li><a href="{{ '/docs/architecture' | relative_url }}">Architecture</a></li>
+                    </ul>
                 </div>
-                <div class="footer-copyright">
-                    <small class="text-muted">&copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}</small>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="tiation-heading">Resources</h6>
+                    <ul class="tiation-links">
+                        <li><a href="{{ '/docs/deployment' | relative_url }}">Deployment</a></li>
+                        <li><a href="{{ '/docs/troubleshooting' | relative_url }}">Troubleshooting</a></li>
+                        <li><a href="{{ '/docs/faq' | relative_url }}">FAQ</a></li>
+                        <li><a href="{{ site.social.github }}/issues" target="_blank">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="tiation-heading">Tiation Ecosystem</h6>
+                    <ul class="tiation-links">
+                        <li><a href="https://github.com/tiation" target="_blank">GitHub</a></li>
+                        <li><a href="https://tiation.github.io" target="_blank">Main Site</a></li>
+                        <li><a href="{{ site.social.github }}" target="_blank">This Project</a></li>
+                        <li><a href="{{ site.social.github }}/discussions" target="_blank">Discussions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="tiation-divider">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="tiation-copyright">&copy; {{ 'now' | date: "%Y" }} Tiation. Part of the <a href="https://github.com/tiation" target="_blank">Tiation</a> ecosystem.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="tiation-social">
+                        <a href="{{ site.social.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="{{ '/docs/' | relative_url }}" title="Documentation"><i class="fas fa-book"></i></a>
+                        <a href="{{ '/docs/api-reference' | relative_url }}" title="API"><i class="fas fa-code"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
