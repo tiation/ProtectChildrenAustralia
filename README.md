@@ -1,403 +1,238 @@
-# Protect Children Australia Website
+# ProtectChildrenAustralia
 
 <div align="center">
 
-![Tiation Ecosystem](https://img.shields.io/badge/🔮_TIATION_ECOSYSTEM-ProtectChildrenAustralia-00FFFF?style=for-the-badge&labelColor=0A0A0A&color=00FFFF)
+![ProtectChildrenAustralia Banner](https://img.shields.io/badge/🔮_TIATION_ECOSYSTEM-ProtectChildrenAustralia-00FFFF?style=for-the-badge&labelColor=0A0A0A&color=00FFFF)
 
-**Enterprise-grade solution in the Tiation ecosystem**
+**Enterprise-grade solution: ProtectChildrenAustralia**
 
 *Professional • Scalable • Mission-Driven*
 
-[![🌐_Live_Demo](https://img.shields.io/badge/🌐_Live_Demo-View_Project-00FFFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/ProtectChildrenAustralia)
-[![📚_Documentation](https://img.shields.io/badge/📚_Documentation-Complete-007FFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/ProtectChildrenAustralia)
-[![⚡_Status](https://img.shields.io/badge/⚡_Status-Active_Development-FF00FF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/ProtectChildrenAustralia)
-[![📄_License](https://img.shields.io/badge/📄_License-MIT-00FFFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/ProtectChildrenAustralia)
+[![🌐_Live_Demo](https://img.shields.io/badge/🌐_Live_Demo-View_Project-00FFFF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/ProtectChildrenAustralia)
+[![📚_Documentation](https://img.shields.io/badge/📚_Documentation-Complete-007FFF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/ProtectChildrenAustralia)
+[![🏗️_Architecture](https://img.shields.io/badge/🏗️_Architecture-Diagram-FF00FF?style=flat-square&labelColor=0A0A0A)](https://tiation.github.io/ProtectChildrenAustralia/architecture)
+[![⚡_Status](https://img.shields.io/badge/⚡_Status-Active Development-FF00FF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/ProtectChildrenAustralia)
+[![📄_License](https://img.shields.io/badge/📄_License-MIT-00FFFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/ProtectChildrenAustralia/blob/main/LICENSE)
 
 </div>
 
+## 🚀 Overview
+
+Enterprise-grade solution: ProtectChildrenAustralia
+
+### ✨ Key Features
+
+- 🎯 **Feature 1** - Description 1
+- 🔧 **Feature 2** - Description 2
+- 🌟 **Feature 3** - Description 3
+- 🛡️ **Feature 4** - Description 4
+
 ---
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/ProtectChildrenAustralia/actions)
-[![Documentation](https://img.shields.io/badge/docs-passing-brightgreen.svg)](https://yourusername.github.io/ProtectChildrenAustralia)
-[![PHP Version](https://img.shields.io/badge/php-%3E%3D7.4-blue.svg)](https://www.php.net/)
-[![MySQL Version](https://img.shields.io/badge/mysql-%3E%3D5.7-blue.svg)](https://www.mysql.com/)
 
-A comprehensive, enterprise-grade resource website focused on child safety in Australia, providing information, resources, and support for parents, educators, and caregivers.
+## 🏗️ Architecture
 
-![Protect Children Australia Screenshot](docs/images/screenshot-homepage.png)
+![Architecture Diagram](assets/architecture/ProtectChildrenAustralia-architecture.svg)
 
-## 🌟 About
+### System Components
 
-Protect Children Australia is a professional platform designed to educate and empower Australian families, educators, and caregivers with comprehensive child safety resources. Our mission is to provide accessible, evidence-based information tailored to Australian contexts and regulations.
-
-### Key Features
-
-- 📚 **Comprehensive Resource Library**: Curated safety information organized by categories
-- 📝 **Dynamic Blog System**: Regular updates on child safety topics
-- 🔐 **Secure Admin Panel**: Professional content management system
-- 📧 **Newsletter Integration**: Keep users informed with latest safety updates
-- 📱 **Mobile-Responsive Design**: Optimized for all devices
-- 🔍 **Advanced Search**: Find relevant content quickly
-- 🎨 **Professional Design**: Clean, accessible interface with dark neon theme
-
-## Project Overview
-
-The Protect Children Australia website serves as a central hub for child safety information specific to Australian contexts. The site aims to educate and empower parents, educators, and caregivers with knowledge and resources to protect children from various risks including online dangers, physical safety hazards, mental health challenges, and emergency situations.
-
-**Target Audience:**
-- Parents and family members
-- Teachers and school administrators
-- Childcare professionals
-- Community organizations working with children
-- General public interested in child safety
-
-The website takes a safety-first approach, providing practical, evidence-based information tailored to Australian contexts and regulations.
-
-## Features
-
-### Content Features
-- **Categorized Safety Information**: Content organized by safety categories (online, physical, mental health, etc.)
-- **Resource Library**: Curated links to external resources and helpful organizations
-- **Blog System**: Regular articles on child safety topics
-- **Emergency Resources**: Quick access to critical safety information and contacts
-
-### User Features
-- **Mobile-Responsive Design**: Fully functional across all device sizes
-- **Search Functionality**: Find content by keyword across the site
-- **Newsletter Subscription**: Stay updated with the latest safety information
-- **Contact Form**: Get in touch with questions or concerns
-- **Category Filtering**: Browse content by specific safety categories
-- **Breadcrumb Navigation**: Easy site navigation
-
-### Admin Features
-- **Secure Admin Dashboard**: Manage all website content
-- **Content Management**: Add, edit, and delete posts and resources
-- **User Management**: Control admin access
-- **Subscriber Management**: View and manage newsletter subscribers
-- **Message Management**: Process contact form submissions
-
-## Technical Stack
-
-The website is built using the following technologies:
-
-- **Frontend**:
-  - HTML5
-  - CSS3 with responsive design
-  - JavaScript (vanilla JS with some jQuery support)
-  - Bootstrap 5 framework
-  - Font Awesome icons
-
-- **Backend**:
-  - PHP 7.4+
-  - MySQL database
-  - PDO for database interactions
-
-- **Security**:
-  - Prepared statements for SQL queries
-  - Input sanitization
-  - Password hashing
-  - Session management
-  - CSRF protection
-
-## File Structure
-
-```
-www.protectchildren.com.au/
-├── admin/                  # Admin area files
-│   ├── index.php           # Admin dashboard
-│   ├── posts.php           # Manage blog posts
-│   ├── categories.php      # Manage categories
-│   ├── resources.php       # Manage resources
-│   └── ...                 # Other admin pages
-├── css/                    # Stylesheet files
-│   └── styles.css          # Main stylesheet
-├── db/                     # Database files
-│   └── database_init.sql   # Database initialization script
-├── images/                 # Image assets
-│   ├── logo.png            # Site logo
-│   └── ...                 # Other images
-├── includes/               # PHP include files
-│   ├── config.php          # Configuration settings
-│   ├── db.php              # Database functions
-│   ├── functions.php       # Utility functions
-│   ├── header.php          # Site header template
-│   ├── footer.php          # Site footer template
-│   └── navbar.php          # Navigation bar template
-├── js/                     # JavaScript files
-│   └── scripts.js          # Main JavaScript file
-├── index.php               # Homepage
-├── blog.php                # Blog listing page
-├── category.php            # Category page
-├── contact.php             # Contact form
-├── newsletter-subscribe.php # Newsletter handler
-└── README.md               # This file
+```mermaid
+graph TB
+    A[Component 1] --> B[Component 2]
+    B --> C[Component 3]
+    C --> D[Component 4]
+    
+    style A fill:#00ffff,stroke:#ff00ff,stroke-width:2px
+    style B fill:#ff00ff,stroke:#00ffff,stroke-width:2px
+    style C fill:#00ffff,stroke:#ff00ff,stroke-width:2px
+    style D fill:#ff00ff,stroke:#00ffff,stroke-width:2px
 ```
 
-## Setup Instructions
+### Technology Stack
 
-Follow these steps to set up the website on your local environment:
+- **Frontend**: Modern Frontend
+- **Backend**: Scalable Backend
+- **Database**: Database
+- **Infrastructure**: Infrastructure
 
-1. **Prerequisites**:
-   - Web server (Apache/Nginx)
-   - PHP 7.4 or higher
-   - MySQL 5.7 or higher
-   - Git (optional)
+---
 
-2. **Clone or download the repository**:
-   ```bash
-   git clone https://github.com/yourusername/www.protectchildren.com.au.git
-   ```
-   
-   Or download and extract the ZIP file.
+## 📋 Table of Contents
 
-3. **Configure the web server**:
-   - Point your web server to the project directory
-   - Ensure PHP is properly configured with the required extensions:
-     - PDO
-     - PDO_MySQL
-     - GD (for image processing)
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Documentation](#-documentation)
+- [Screenshots](#-screenshots)
+- [FAQ](#-faq)
+- [Contributing](#-contributing)
+- [Support](#-support)
+- [License](#-license)
+- [About Tiation](#-about-tiation)
 
-4. **Update configuration**:
-   - Open `includes/config.php`
-   - Update the database credentials and site URL to match your environment:
-     ```php
-     define('DB_HOST', 'localhost');
-     define('DB_NAME', 'protect_children');
-     define('DB_USER', 'your_username');
-     define('DB_PASS', 'your_password');
-     define('SITE_URL', 'http://localhost/www.protectchildren.com.au');
-     ```
+---
 
-5. **Set up the database** (see Database Setup section below)
+## ✨ Features
 
-6. **Create required directories**:
-   ```bash
-   mkdir -p logs uploads
-   chmod 755 logs uploads
-   ```
+{{FEATURES_LIST}}
 
-7. **Test the installation**:
-   - Open your browser and navigate to the site URL
-   - Verify that the homepage loads correctly
-   - Test navigation to various sections
+---
 
-## Database Setup
-
-1. **Create the database**:
-   ```sql
-   CREATE DATABASE protect_children;
-   ```
-
-2. **Create a database user** (optional but recommended):
-   ```sql
-   CREATE USER 'protect_user'@'localhost' IDENTIFIED BY 'secure_password';
-   GRANT ALL PRIVILEGES ON protect_children.* TO 'protect_user'@'localhost';
-   FLUSH PRIVILEGES;
-   ```
-
-3. **Initialize the database**:
-   ```bash
-   mysql -u your_username -p protect_children < db/database_init.sql
-   ```
-   
-   Alternatively, you can use phpMyAdmin or another MySQL management tool to import the SQL file.
-
-4. **Verify the database setup**:
-   - Check that all tables were created successfully:
-     - users
-     - categories
-     - posts
-     - resources
-     - comments
-     - newsletter_subscribers
-     - contact_messages
-
-## Administration
-
-The admin area allows authorized users to manage all website content and functionality.
-
-### Accessing the Admin Area
-
-1. Navigate to `www.protectchildren.com.au/admin/` in your browser
-2. Log in with admin credentials:
-   - Default username: `admin`
-   - Default password: See your installation notes (change immediately after first login)
-
-### Admin Capabilities
-
-- **Dashboard**: View site statistics and recent activity
-- **Posts**: Add, edit, delete blog posts
-- **Categories**: Manage content categories
-- **Resources**: Add and manage external resources
-- **Users**: Manage admin users and permissions
-- **Subscribers**: View and manage newsletter subscribers
-- **Messages**: Read and respond to contact form submissions
-- **Settings**: Configure website settings
-
-### Adding Content
-
-1. **To add a blog post**:
-   - Go to Posts > Add New
-   - Fill in the title, content, select category
-   - Upload a featured image (optional)
-   - Click Publish
-
-2. **To add a resource**:
-   - Go to Resources > Add New
-   - Enter the title, description, and external URL
-   - Select a category
-   - Click Save
-
-## Security Considerations
-
-The website implements several security measures:
-
-1. **Database Security**:
-   - All database queries use prepared statements via PDO
-   - No direct SQL queries with user input
-   - Database credentials are stored in a separate config file
-
-2. **User Authentication**:
-   - Passwords are hashed using PHP's password_hash() function
-   - Session management with secure cookie settings
-   - Role-based access control for admin features
-
-3. **Form Security**:
-   - Input sanitization for all user-submitted data
-   - CSRF protection tokens for forms
-   - Validation on both client and server sides
-
-4. **General Security**:
-   - Direct access prevention for include files
-   - Error handling that doesn't expose sensitive information
-   - Regular security updates recommended
-
-### Security Recommendations
-
-- Change the default admin password immediately after installation
-- Regularly back up the database
-- Keep PHP and all libraries updated
-- Consider implementing additional security measures like:
-  - SSL certificate (HTTPS)
-  - Fail2Ban for login protection
-  - Web Application Firewall
-
-## Future Enhancements
-
-Potential improvements for future development:
-
-1. **Content and Features**:
-   - Age-specific safety guides
-   - Interactive safety checklists
-   - Printable resources for parents and educators
-   - Safety event calendar
-   - User forums or discussion boards
-   - Multi-language support for diverse Australian communities
-
-2. **Technical Enhancements**:
-   - Advanced search functionality with filters
-   - Content rating system
-   - User accounts for parents/educators
-   - Email notification system
-   - Integration with social media platforms
-   - Progressive Web App (PWA) capabilities
-   - Content versioning system
-
-3. **Administrative Improvements**:
-   - Enhanced analytics dashboard
-   - Automated content moderation
-   - Bulk content management tools
-   - Advanced user role management
-   - Automated backup system
-
-## 📚 Documentation
-
-Comprehensive documentation is available at: [https://yourusername.github.io/ProtectChildrenAustralia](https://yourusername.github.io/ProtectChildrenAustralia)
-
-- **[User Guide](docs/user-guide.md)** - How to use the platform
-- **[API Reference](docs/api-reference.md)** - Complete API documentation
-- **[Architecture Guide](docs/architecture.md)** - Technical architecture overview
-- **[Deployment Guide](docs/deployment.md)** - Production deployment instructions
-- **[FAQ](docs/faq.md)** - Frequently asked questions
-- **[Troubleshooting](docs/troubleshooting.md)** - Common issues and solutions
-
-## 📷 Screenshots
-
-### Homepage
-![Homepage](docs/images/screenshot-homepage.png)
-
-### Admin Dashboard
-![Admin Dashboard](docs/images/screenshot-admin.png)
-
-### Resource Library
-![Resource Library](docs/images/screenshot-resources.png)
-
-## 🚀 Quick Start
+## 🏃‍♂️ Quick Start
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ProtectChildrenAustralia.git
-
-# Navigate to project directory
+git clone https://github.com/tiation/ProtectChildrenAustralia.git
 cd ProtectChildrenAustralia
 
-# Set up database
-mysql -u root -p < db/database_init.sql
+# Install dependencies
+{{INSTALL_COMMANDS}}
 
-# Configure settings
-cp includes/config.example.php includes/config.php
-
-# Start local development server
-php -S localhost:8000
+# Run the application
+{{RUN_COMMANDS}}
 ```
 
-## 📊 Analytics & Monitoring
+---
 
-- **Performance Monitoring**: Built-in analytics dashboard
-- **Error Tracking**: Comprehensive logging system
-- **User Analytics**: Track user engagement and content performance
-- **Security Monitoring**: Real-time security event tracking
+## 📦 Installation
 
-## 🔒 Security & Compliance
+### Prerequisites
 
-- **OWASP Compliance**: Follows OWASP security guidelines
-- **Data Protection**: GDPR and Australian Privacy Act compliant
-- **Secure Authentication**: Multi-factor authentication support
-- **Regular Security Audits**: Automated vulnerability scanning
+{{PREREQUISITES}}
 
-## Contact Information
+### Installation Steps
 
-For questions, support, or contributions:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/tiation/ProtectChildrenAustralia.git
+   cd ProtectChildrenAustralia
+   ```
 
-- **Website Administrator**: admin@protectchildren.com.au
-- **Technical Support**: support@protectchildren.com.au
-- **Content Team**: content@protectchildren.com.au
-- **General Inquiries**: info@protectchildren.com.au
+2. **Install dependencies**
+   ```bash
+   {{DETAILED_INSTALL_COMMANDS}}
+   ```
 
-For emergencies involving children, please contact emergency services directly at 000.
+3. **Configuration**
+   ```bash
+   {{CONFIG_COMMANDS}}
+   ```
 
 ---
 
-**Disclaimer**: This website is created to provide information and resources. It is not a substitute for professional advice. In emergencies, always contact appropriate emergency services.
+## 🎯 Usage
 
+### Basic Usage
 
-## Related Repositories
+{{BASIC_USAGE}}
 
-This repository is part of the Tiation GitHub ecosystem. For a complete overview of all repositories and their relationships, see the [Repository Index](./REPOSITORY_INDEX.md).
+### Advanced Usage
 
-### Direct Dependencies
-- [Case_Study_Legal](../Case_Study_Legal/) - Legal framework and templates
-- [AlmaStreet](../AlmaStreet/) - Community initiatives
-- [dontbeacunt](../dontbeacunt/) - Online safety campaign
+{{ADVANCED_USAGE}}
 
-### Quick Links
-- [Repository Index](./REPOSITORY_INDEX.md) - Complete repository overview
-- [Development Setup](../ubuntu-dev-setup/README.md) - Development environment setup
-- [Workflows](../workflows/) - CI/CD templates
-- [Infrastructure](../server-configs-gae/) - Deployment configurations
+### Examples
+
+{{USAGE_EXAMPLES}}
 
 ---
-*Part of the [Tiation](../tiation/) ecosystem*
+
+## 📚 Documentation
+
+- **[User Guide](docs/user-guide.md)** - Complete user documentation
+- **[API Reference](docs/api-reference.md)** - Technical API documentation
+- **[Architecture](docs/architecture.md)** - System architecture overview
+- **[Deployment Guide](docs/deployment.md)** - Production deployment instructions
+- **[Developer Guide](docs/developer-guide.md)** - Development setup and guidelines
+
+### Live Documentation
+
+Visit our [GitHub Pages site](https://tiation.github.io/ProtectChildrenAustralia) for interactive documentation.
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+  <img src="assets/screenshots/main-interface.png" alt="Main Interface" width="800">
+  <p><em>Main application interface</em></p>
+</div>
+
+<div align="center">
+  <img src="assets/screenshots/dashboard.png" alt="Dashboard" width="800">
+  <p><em>Analytics dashboard</em></p>
+</div>
+
+---
+
+## ❓ FAQ
+
+### General Questions
+
+**Q: What makes this solution enterprise-grade?**
+A: Our solution includes comprehensive security, scalability, monitoring, and enterprise integration features with professional support.
+
+**Q: Is this compatible with existing systems?**
+A: Yes, we provide extensive API and integration capabilities for seamless system integration.
+
+**Q: What support options are available?**
+A: We offer community support through GitHub Issues and professional enterprise support for commercial users.
+
+### Technical Questions
+
+**Q: What are the system requirements?**
+A: {{SYSTEM_REQUIREMENTS}}
+
+**Q: How do I handle large scale deployments?**
+A: See our [Deployment Guide](docs/deployment.md) for enterprise-scale deployment strategies.
+
+**Q: Are there any security considerations?**
+A: Yes, please review our [Security Guide](docs/security.md) for comprehensive security best practices.
+
+### Troubleshooting
+
+**Q: Common installation issues**
+A: Check our [Troubleshooting Guide](docs/troubleshooting.md) for solutions to common problems.
+
+**Q: Performance optimization**
+A: Refer to our [Performance Guide](docs/performance.md) for optimization strategies.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Setup
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+### Code of Conduct
+
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+---
+
+## 🆘 Support
+
+### Community Support
+
+- **GitHub Issues**: [Report bugs or request features](https://github.com/tiation/ProtectChildrenAustralia/issues)
+- **Discussions**: [Join community discussions](https://github.com/tiation/ProtectChildrenAustralia/discussions)
+- **Documentation**: [Browse our documentation](https://tiation.github.io/ProtectChildrenAustralia)
+
+### Enterprise Support
+
+For enterprise customers, we offer:
+- Priority support
+- Custom development
+- Training and consultation
+- SLA guarantees
+
+Contact us at [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
 
 ---
 
@@ -405,12 +240,49 @@ This repository is part of the Tiation GitHub ecosystem. For a complete overview
 
 This repository is part of the Tiation ecosystem. Explore related projects:
 
-- [🌟 TiaAstor](https://github.com/TiaAstor/TiaAstor) - Personal brand and story
+- [🌟 Tiation Platform](https://github.com/tiation/tiation-ai-platform) - Enterprise AI platform
+- [🤖 AI Agents](https://github.com/tiation/tiation-ai-agents) - Intelligent automation
+- [⚡ Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows) - Developer tools
+- [🐳 Docker Solutions](https://github.com/tiation/tiation-docker-debian) - Container orchestration
+- [📝 CMS](https://github.com/tiation/tiation-cms) - Content management system
 - [🐰 ChaseWhiteRabbit NGO](https://github.com/tiation/tiation-chase-white-rabbit-ngo) - Social impact initiatives
 - [🏗️ Infrastructure](https://github.com/tiation/tiation-rigger-infrastructure) - Enterprise infrastructure
-- [🤖 AI Agents](https://github.com/tiation/tiation-ai-agents) - Intelligent automation
-- [📝 CMS](https://github.com/tiation/tiation-cms) - Content management system
-- [⚡ Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows) - Developer tools
 
 ---
-*Built with 💜 by the Tiation team*
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🌟 About Tiation
+
+**Tiation** is a leading provider of enterprise-grade software solutions, specializing in automation, productivity, and system integration tools. Our mission is to empower organizations with cutting-edge technology that drives efficiency and innovation.
+
+### Our Solutions
+
+- **Automation Platform**: Comprehensive business process automation
+- **Developer Tools**: Professional development and deployment tools
+- **Enterprise Integration**: Seamless system integration solutions
+- **Security Framework**: Advanced security and compliance tools
+
+### Connect With Us
+
+- **Website**: [https://github.com/tiation](https://github.com/tiation)
+- **GitHub**: [https://github.com/tiation](https://github.com/tiation)
+- **LinkedIn**: [Tiation Company](https://linkedin.com/company/tiation)
+- **Twitter**: [@TiationTech](https://twitter.com/TiationTech)
+
+---
+
+<div align="center">
+  <p>
+    <strong>Built with ❤️ by the Tiation Team</strong>
+  </p>
+  <p>
+    <a href="https://github.com/tiation">
+      <img src="https://img.shields.io/badge/Powered%20by-Tiation-cyan.svg" alt="Powered by Tiation">
+    </a>
+  </p>
+</div>
