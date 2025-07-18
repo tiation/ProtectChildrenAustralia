@@ -9,7 +9,7 @@ plugins:
   - jekyll-seo-tag
 
 # GitHub Pages configuration
-url: "https://yourusername.github.io"
+url: "https://tiation.github.io"
 baseurl: "/ProtectChildrenAustralia"
 
 # Navigation
@@ -38,7 +38,7 @@ author:
 
 # Social media
 social:
-  github: yourusername/ProtectChildrenAustralia
+  github: https://github.com/tiation/ProtectChildrenAustralia
 
 # Additional settings
 show_downloads: true
