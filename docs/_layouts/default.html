@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:image" content="{{ site.url }}/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta property="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta property="twitter:image" content="{{ site.url }}/images/og-image.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Dark Neon Theme -->
+    <link rel="stylesheet" href="{{ '/css/dark-neon-theme.css' | relative_url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ '/images/favicon.ico' | relative_url }}">
+    
+    <!-- Jekyll SEO Tag -->
+    {% seo %}
+</head>
+<body class="bg-dark-primary">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ '/' | relative_url }}">
+                <i class="fas fa-shield-alt me-2"></i>
+                {{ site.title }}
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    {% for item in site.nav %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    </li>
+                    {% endfor %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.social.github }}" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-primary text-center py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-glow">{{ site.title }}</h5>
+                    <p class="text-muted">{{ site.description }}</p>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-glow">Quick Links</h5>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="{{ site.social.github }}" class="text-light" target="_blank">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="{{ '/docs/' | relative_url }}" class="text-light">
+                            <i class="fas fa-book fa-2x"></i>
+                        </a>
+                        <a href="{{ '/docs/api-reference' | relative_url }}" class="text-light">
+                            <i class="fas fa-code fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12">
+                    <p class="mb-0 text-muted">
+                        &copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}. Licensed under MIT.
+                    </p>
+                    <p class="mb-0 text-muted">
+                        <small>For emergencies involving children, contact 000 immediately.</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add glow effect to cards on hover
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 0 20px rgba(0, 255, 255, 0.3)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Add typing effect to hero title
+        if (document.querySelector('.hero-title')) {
+            const text = document.querySelector('.hero-title').textContent;
+            const element = document.querySelector('.hero-title');
+            element.textContent = '';
+            
+            let i = 0;
+            const timer = setInterval(() => {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>

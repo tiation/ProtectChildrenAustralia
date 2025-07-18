@@ -1,0 +1,320 @@
+/* Dark Neon Theme for Protect Children Australia */
+/* Inspired by tiation's preferred dark neon theme with cyan gradient flares */
+
+:root {
+    --primary-dark: #0a0a0a;
+    --secondary-dark: #1a1a1a;
+    --accent-dark: #2a2a2a;
+    --text-light: #ffffff;
+    --text-muted: #b0b0b0;
+    --cyan-primary: #00ffff;
+    --cyan-secondary: #00cccc;
+    --magenta-primary: #ff00ff;
+    --magenta-secondary: #cc00cc;
+    --gradient-primary: linear-gradient(45deg, var(--cyan-primary), var(--magenta-primary));
+    --gradient-secondary: linear-gradient(135deg, var(--cyan-secondary), var(--magenta-secondary));
+    --neon-glow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    --subtle-glow: 0 0 5px currentColor;
+}
+
+body {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+.navbar {
+    background: var(--secondary-dark);
+    border-bottom: 2px solid transparent;
+    border-image: var(--gradient-primary) 1;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    color: var(--text-light) !important;
+    font-weight: bold;
+    text-shadow: var(--subtle-glow);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-light) !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--cyan-primary) !important;
+    text-shadow: var(--subtle-glow);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    color: var(--primary-dark);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: var(--subtle-glow);
+}
+
+.btn-primary:hover {
+    background: var(--gradient-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--neon-glow);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--cyan-primary);
+    color: var(--cyan-primary);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: var(--cyan-primary);
+    color: var(--primary-dark);
+    box-shadow: var(--subtle-glow);
+}
+
+/* Cards */
+.card {
+    background: var(--secondary-dark);
+    border: 1px solid var(--accent-dark);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyan-primary);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.card-header {
+    background: var(--gradient-primary);
+    color: var(--primary-dark);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-body {
+    background: var(--secondary-dark);
+}
+
+/* Forms */
+.form-control {
+    background: var(--accent-dark);
+    border: 1px solid var(--accent-dark);
+    color: var(--text-light);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: var(--secondary-dark);
+    border-color: var(--cyan-primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 255, 0.25);
+    color: var(--text-light);
+}
+
+.form-label {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="grad"><stop offset="0%" style="stop-color:%2300ffff;stop-opacity:0.3"/><stop offset="100%" style="stop-color:%2300ffff;stop-opacity:0"/></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23grad)"/><circle cx="80" cy="40" r="3" fill="url(%23grad)"/><circle cx="40" cy="80" r="2" fill="url(%23grad)"/></svg>');
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+    100% { transform: translateY(0px) rotate(360deg); }
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Text Effects */
+.text-glow {
+    text-shadow: var(--subtle-glow);
+}
+
+.text-primary {
+    color: var(--cyan-primary) !important;
+}
+
+.text-secondary {
+    color: var(--text-muted) !important;
+}
+
+/* Utility Classes */
+.bg-dark-primary {
+    background-color: var(--primary-dark) !important;
+}
+
+.bg-dark-secondary {
+    background-color: var(--secondary-dark) !important;
+}
+
+.bg-gradient-primary {
+    background: var(--gradient-primary) !important;
+}
+
+.border-gradient {
+    border: 2px solid transparent;
+    border-image: var(--gradient-primary) 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .navbar-nav .nav-link {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Admin Panel Specific */
+.admin-sidebar {
+    background: var(--secondary-dark);
+    border-right: 2px solid transparent;
+    border-image: var(--gradient-primary) 1;
+}
+
+.admin-sidebar .nav-link {
+    color: var(--text-light);
+    transition: all 0.3s ease;
+    margin: 0.25rem 0;
+    border-radius: 5px;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background: var(--gradient-primary);
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+/* Tables */
+.table-dark {
+    background: var(--secondary-dark);
+    color: var(--text-light);
+}
+
+.table-dark th {
+    background: var(--gradient-primary);
+    color: var(--primary-dark);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.table-dark td {
+    border-color: var(--accent-dark);
+}
+
+/* Alerts */
+.alert-success {
+    background: linear-gradient(135deg, #00ff88, #00cc66);
+    color: var(--primary-dark);
+    border: none;
+    font-weight: bold;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #ff0066, #cc0044);
+    color: var(--text-light);
+    border: none;
+    font-weight: bold;
+}
+
+.alert-info {
+    background: var(--gradient-primary);
+    color: var(--primary-dark);
+    border: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-dark);
+    border-top: 2px solid transparent;
+    border-image: var(--gradient-primary) 1;
+    padding: 2rem 0;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-on-hover:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gradient-secondary);
+}
