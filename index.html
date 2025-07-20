@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect Children Australia - Comprehensive Child Safety Initiative</title>
+    <style>
+        :root {
+            --neon-cyan: #00ffff;
+            --neon-magenta: #ff00ff;
+            --dark-bg: #0a0a0a;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--dark-bg);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .gradient-header {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1rem 0;
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        h2 {
+            color: var(--neon-cyan);
+            border-bottom: 2px solid var(--neon-magenta);
+            padding-bottom: 0.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .gradient-header {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="gradient-header">Protect Children Australia</h1>
+        
+        <div class="card">
+            <h2>Our Mission</h2>
+            <p>Creating a safer, more nurturing environment for all Australian children through comprehensive reform and innovative solutions.</p>
+            <a href="https://github.com/tiation/ProtectChildrenAustralia" class="cta-button">Join Our Initiative</a>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Economic Reform</h2>
+                <ul>
+                    <li>Universal Basic Income</li>
+                    <li>Flexible Work Arrangements</li>
+                    <li>Affordable Childcare</li>
+                    <li>Community Support</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Parental Support</h2>
+                <ul>
+                    <li>Extended Leave Benefits</li>
+                    <li>Mental Health Resources</li>
+                    <li>Work-Life Balance</li>
+                    <li>Education Programs</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Educational Innovation</h2>
+                <ul>
+                    <li>Montessori Integration</li>
+                    <li>Emotional Intelligence</li>
+                    <li>Social Skills Development</li>
+                    <li>Safe Learning Spaces</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Safety Measures</h2>
+                <ul>
+                    <li>Comprehensive Protocols</li>
+                    <li>Anti-Bullying Initiatives</li>
+                    <li>Digital Safety</li>
+                    <li>Emergency Response</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
