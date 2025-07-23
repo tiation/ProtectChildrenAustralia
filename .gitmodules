@@ -1,0 +1,3 @@
+[submodule "website/ai-remix-platform"]
+	path = website/ai-remix-platform
+	url = git@github.com:tiation/ai-remix-platform.git
